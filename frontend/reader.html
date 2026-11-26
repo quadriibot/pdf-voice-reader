@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO TITLE -->
+    <title>Online PDF Reader with Text to Speech | PDF Voice Reader</title>
+
+    <!-- SEO DESCRIPTION -->
+    <meta name="description" content="Read PDF documents online and listen to your PDF files with text-to-speech. Upload documents, control reading speed and choose your preferred voice.">
+
+    <!-- AUTHOR -->
+    <meta name="author" content="PDF Voice Reader">
+
+    <!-- SEARCH ENGINE INSTRUCTIONS -->
+    <meta name="robots" content="index, follow">
+
+    <!-- THEME COLOR -->
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- SOCIAL MEDIA SHARING -->
+    <meta property="og:title" content="Online PDF Reader with Text to Speech">
+    <meta property="og:description" content="Upload, read and listen to your PDF documents with PDF Voice Reader.">
+    <meta property="og:type" content="website">
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reader.css">
+
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <h2>PDF <span>Voice</span> Reader</h2>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reader.html">Reader</a></li>
+                <li><a href="library.html">My Library</a></li>
+            </ul>
+
+            <a href="index.html" class="nav-button">Back Home</a>
+
+        </nav>
+    </header>
+
+
+    <!-- MAIN READER AREA -->
+    <main class="reader-main">
+
+        <!-- PAGE HEADING -->
+        <section class="reader-heading">
+
+            <div>
+                <p class="reader-tag">YOUR READING SPACE</p>
+
+                <h1>PDF <span>Reader</span></h1>
+
+                <p>
+                    Upload a document and enjoy reading
+                    or listening to it.
+                </p>
+            </div>
+
+            <button class="upload-button" id="uploadButton">
+                + Upload PDF
+            </button>
+
+            <input
+                type="file"
+                id="pdfUpload"
+                accept=".pdf,application/pdf"
+                hidden
+            >
+
+        </section>
+
+
+        <!-- READER WORKSPACE -->
+        <section class="reader-workspace">
+
+            <!-- PDF VIEWER -->
+            <div class="pdf-viewer">
+
+                <div class="viewer-header">
+
+                    <h3 id="documentTitle">No Document Selected</h3>
+
+                    <p id="pageInformation">Page 0 of 0</p>
+
+                </div>
+
+
+                <div class="pdf-page-area" id="pdfPageArea">
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">📄</div>
+
+                        <h2>Your PDF will appear here</h2>
+
+                        <p>
+                            Upload a PDF document to start reading.
+                        </p>
+
+                        <button class="upload-button" id="emptyUploadButton">
+                            Choose PDF
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PDF PAGE CONTROLS -->
+                <div class="page-controls">
+
+                    <button id="previousPage" disabled>
+                        Previous
+                    </button>
+
+                    <span>
+                        Page
+                        <span id="currentPage">0</span>
+                        /
+                        <span id="totalPages">0</span>
+                    </span>
+
+                    <button id="nextPage" disabled>
+                        Next
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- AUDIO PLAYER SIDEBAR -->
+            <aside class="audio-sidebar">
+
+                <div class="audio-heading">
+
+                    <h2>Audio Player</h2>
+
+                    <p>Listen to your document</p>
+
+                </div>
+
+
+                <!-- AUDIO STATUS -->
+                <div class="audio-status">
+
+                    <div class="audio-status-icon">🎧</div>
+
+                    <h3 id="audioTitle">Ready to Listen?</h3>
+
+                    <p id="audioStatus">
+                        Upload a PDF to begin.
+                    </p>
+
+                </div>
+
+
+                <!-- READING PROGRESS -->
+                <div class="progress-section">
+
+                    <div class="progress-heading">
+
+                        <span>Reading Progress</span>
+
+                        <span id="progressPercentage">0%</span>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-fill"
+                            id="progressFill"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AUDIO CONTROLS -->
+                <div class="audio-controls">
+
+                    <button id="previousText" disabled>
+                        ⏮
+                    </button>
+
+                    <button id="playButton" class="play-button" disabled>
+                        ▶
+                    </button>
+
+                    <button id="pauseButton" disabled>
+                        ⏸
+                    </button>
+
+                    <button id="stopButton" disabled>
+                        ⏹
+                    </button>
+
+                    <button id="nextText" disabled>
+                        ⏭
+                    </button>
+
+                </div>
+
+
+                <!-- READING SETTINGS -->
+                <div class="reading-settings">
+
+                    <h3>Reading Settings</h3>
+
+                    <div class="setting-item">
+
+                        <label for="voiceSpeed">
+                            Reading Speed
+                        </label>
+
+                        <select id="voiceSpeed">
+
+                            <option value="0.5">0.5x</option>
+                            <option value="0.75">0.75x</option>
+                            <option value="1" selected>1.0x</option>
+                            <option value="1.25">1.25x</option>
+                            <option value="1.5">1.5x</option>
+                            <option value="2">2.0x</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="setting-item">
+
+                        <label for="voiceSelect">
+                            Voice
+                        </label>
+
+                        <select id="voiceSelect">
+
+                            <option value="">
+                                Default Voice
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VOICE CLONING SECTION -->
+                <div class="voice-cloning-section">
+
+                    <div class="voice-cloning-heading">
+
+                        <h3>🎙️ Your Own AI Voice</h3>
+
+                        <span class="coming-soon-badge">
+                            Coming Soon
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Create a personal AI voice and listen to
+                        your PDF documents in your own voice.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="voice-cloning-button"
+                        id="voiceCloningButton"
+                    >
+                        Create My AI Voice
+                    </button>
+
+                </div>
+
+
+                <!-- SAVE DOCUMENT -->
+                <button class="save-button" id="saveDocument" disabled>
+                    Save to My Library
+                </button>
+
+            </aside>
+
+        </section>
+
+
+        <!-- EXTRACTED TEXT SECTION -->
+        <section class="text-section">
+
+            <div class="text-heading">
+
+                <h2>Document Text</h2>
+
+                <p>
+                    The extracted text from your PDF will appear here.
+                </p>
+
+            </div>
+
+            <div class="extracted-text" id="extractedText">
+
+                <p>
+                    Your document text will appear here after
+                    you upload a PDF.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- CUSTOM SAVE PDF POPUP -->
+    <div class="save-modal" id="savePdfModal" hidden>
+
+        <div
+            class="save-modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="saveModalTitle"
+        >
+
+            <h2 id="saveModalTitle">Save to My Library</h2>
+
+            <p>
+                Give your PDF a name so you can easily find it later.
+            </p>
+
+            <label for="savePdfName">Document Name</label>
+
+            <input
+                type="text"
+                id="savePdfName"
+                placeholder="Enter document name"
+            >
+
+            <div class="save-modal-buttons">
+
+                <button type="button" id="cancelSavePdf">
+                    Cancel
+                </button>
+
+                <button type="button" id="confirmSavePdf">
+                    Save PDF
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 PDF Voice Reader.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="js/pdf.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/reader.js"></script>
+    <script src="js/summarize.js"></script>
+
+
+    <!-- VOICE CLONING COMING SOON MESSAGE -->
+    <script>
+
+        var voiceCloningButton = document.getElementById("voiceCloningButton");
+
+        voiceCloningButton.addEventListener("click", function () {
+
+            alert(
+                "AI Voice Cloning is Coming Soon!\n\n" +
+                "Soon, you will be able to create your own personal AI voice " +
+                "and use it to listen to your PDF documents."
+            );
+
+        });
+
+    </script>
+
+</body>
+
+</html>

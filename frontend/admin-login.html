@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | PDF Voice Reader</title>
+
+    <!-- KEEP ADMIN LOGIN OUT OF GOOGLE SEARCH -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <div class="login-box">
+
+            <div class="login-logo">
+                PDF <span>Voice Reader</span>
+            </div>
+
+            <h1>Admin Login</h1>
+
+            <p class="login-description">
+                Sign in to access your administration dashboard.
+            </p>
+
+            <form id="adminLoginForm">
+
+                <div class="login-input-group">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your admin email"
+                        required
+                    >
+                </div>
+
+                <div class="login-input-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="login-button">
+                    Sign In
+                </button>
+
+                <p id="loginMessage"></p>
+
+            </form>
+
+            <a href="index.html" class="back-home">
+                ← Back to Homepage
+            </a>
+
+        </div>
+
+    </main>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

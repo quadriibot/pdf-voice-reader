@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- PAGE TITLE -->
+    <title>My Library | PDF Voice Reader</title>
+
+    <!-- PAGE DESCRIPTION -->
+    <meta name="description" content="Access and organize your saved PDF documents in your PDF Voice Reader personal library.">
+
+    <!-- KEEP THIS PAGE OUT OF GOOGLE SEARCH -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- THEME COLOR -->
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/library.css">
+
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="library-header">
+
+        <div class="container">
+
+            <a href="index.html" class="logo">
+                PDF Voice Reader
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="reader.html">Reader</a>
+                <a href="library.html">My Library</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN LIBRARY -->
+    <main class="library-main">
+
+        <!-- LIBRARY HEADING -->
+        <section class="library-heading">
+
+            <h1>My PDF Library</h1>
+
+            <p>Your saved documents, all in one place.</p>
+
+            <a href="reader.html" class="upload-link">
+                Start Reading
+            </a>
+
+        </section>
+
+
+        <!-- LIBRARY TOOLS -->
+        <section class="library-tools">
+
+            <input
+                type="text"
+                id="searchLibrary"
+                placeholder="Search your documents..."
+            >
+
+            <a href="reader.html" class="upload-link">
+                + Upload New PDF
+            </a>
+
+        </section>
+
+
+        <!-- SAVED DOCUMENTS -->
+        <section class="documents-section">
+
+            <h2>Saved Documents</h2>
+
+            <div id="documentsList" class="documents-list">
+
+                <p>Loading your documents...</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="js/library.js"></script>
+
+</body>
+</html>

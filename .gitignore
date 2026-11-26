@@ -1,0 +1,25 @@
+
+# Node.js dependencies
+node_modules/
+
+# Environment variables and private settings
+.env
+.env.*
+
+# Allow an example environment file to be shared
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Temporary files
+temp/
+tmp/

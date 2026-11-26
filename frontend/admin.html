@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | PDF Voice Reader</title>
+
+    <!-- KEEP ADMIN DASHBOARD OUT OF GOOGLE SEARCH -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+    <!-- ADMIN HEADER -->
+    <header class="admin-header">
+
+        <nav class="admin-navbar">
+
+            <div class="logo">
+                <h2>PDF <span>Voice</span> Reader</h2>
+            </div>
+
+            <div class="admin-label">
+                ADMIN PANEL
+            </div>
+
+            <a href="index.html" class="nav-button">
+                Visit Website
+            </a>
+
+            <button type="button" id="adminLogoutButton" class="nav-button">
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ADMIN MAIN CONTENT -->
+    <main class="admin-main">
+
+        <section class="admin-welcome">
+
+            <div>
+
+                <p class="admin-tag">CONTROL CENTRE</p>
+
+                <h1>Admin <span>Dashboard</span></h1>
+
+                <p>
+                    Monitor your website performance and activity.
+                </p>
+
+            </div>
+
+            <div class="admin-date">
+
+                <p>Dashboard Overview</p>
+
+                <h3>Website Analytics</h3>
+
+            </div>
+
+        </section>
+
+
+        <p id="dashboardMessage" class="dashboard-message">
+            Dashboard statistics have not been loaded yet.
+        </p>
+
+
+        <!-- STATISTICS CARDS -->
+        <section class="statistics-container">
+
+            <div class="statistics-card">
+
+                <div class="statistics-icon">👥</div>
+
+                <p>Total Visitors</p>
+
+                <h2 id="totalVisitors">--</h2>
+
+                <span>All-time website visitors</span>
+
+            </div>
+
+
+            <div class="statistics-card">
+
+                <div class="statistics-icon">🟢</div>
+
+                <p>Active Users</p>
+
+                <h2 id="activeUsers">--</h2>
+
+                <span>Currently active users</span>
+
+            </div>
+
+
+            <div class="statistics-card">
+
+                <div class="statistics-icon">📄</div>
+
+                <p>Total PDF Uploads</p>
+
+                <h2 id="totalUploads">--</h2>
+
+                <span>Documents uploaded</span>
+
+            </div>
+
+
+            <div class="statistics-card">
+
+                <div class="statistics-icon">🎧</div>
+
+                <p>Total Listeners</p>
+
+                <h2 id="totalListeners">--</h2>
+
+                <span>Users who started listening</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ANALYTICS SECTION -->
+        <section class="analytics-section">
+
+            <div class="analytics-heading">
+
+                <div>
+
+                    <h2>Website Analytics</h2>
+
+                    <p>Monitor activity over different periods.</p>
+
+                </div>
+
+                <select id="analyticsPeriod">
+
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="analytics-placeholder">
+
+                <div class="analytics-icon">📊</div>
+
+                <h3>Analytics Chart</h3>
+
+                <p>
+                    Your website activity chart will appear here
+                    when analytics data is connected.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- RECENT ACTIVITY -->
+        <section class="activity-section">
+
+            <div class="activity-heading">
+
+                <h2>Recent Activity</h2>
+
+                <p>Keep track of what's happening on your website.</p>
+
+            </div>
+
+
+            <div class="activity-placeholder">
+
+                <div class="activity-icon">📋</div>
+
+                <h3>No Activity Available</h3>
+
+                <p>
+                    Recent website activities will appear here
+                    when the backend is connected.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ADMIN FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 PDF Voice Reader Admin Dashboard.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>
