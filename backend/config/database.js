@@ -1,10 +1,19 @@
 
 const { Pool } = require("pg");
-require("dotenv").config({ path: "./backend/.env" });
+const path = require("path");
+
+require("dotenv").config({
+    path: path.join(__dirname, "../.env")
+});
 
 // DATABASE CONNECTION
 const pool = new Pool({
-    connectionString: process.env.DATABASE_URL
+    connectionString: process.env.DATABASE_URL,
+
+    // SECURE CONNECTION FOR PRODUCTION DATABASE
+    ssl: process.env.NODE_ENV === "production"
+        ? { rejectUnauthorized: false }
+        : false
 });
 
 // CHECK DATABASE CONNECTION
